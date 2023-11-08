@@ -1517,10 +1517,10 @@
 			<processor type="Sitecore.Owin.Authentication.IdentityServer.Pipelines.Initialize.JwtBearerAuthentication, Sitecore.Owin.Authentication.IdentityServer" resolve="true" patch:source="Sitecore.Owin.Authentication.IdentityServer.config">
 				<identityProviderName>SitecoreIdentityServer</identityProviderName>
 				<audiences hint="raw:AddAudience">
-					<audience value="https://identityserver.xm.local/resources" />
+					<audience value="https://id.xm.local/resources" />
 				</audiences>
 				<issuers hint="list">
-					<issuer>https://identityserver.xm.local</issuer>
+					<issuer>https://id.xm.local</issuer>
 				</issuers>
 			</processor>
 			<processor type="Sitecore.Owin.Authentication.IdentityServer.Pipelines.Initialize.LogoutEndpoint, Sitecore.Owin.Authentication.IdentityServer" resolve="true" patch:source="Sitecore.Owin.Authentication.IdentityServer.config" />
@@ -10694,7 +10694,7 @@
 	<corsPolicies type="Sitecore.Owin.Cors.CorsPolicies, Sitecore.Owin" patch:source="Sitecore.Owin.Cors.config">
 		<policies hint="list:AddPolicy" />
 	</corsPolicies>
-	<sc.variable name="identityServerAuthority" value="https://identityserver.xm.local" patch:source="Sitecore.Owin.Authentication.IdentityServer.config" />
+	<sc.variable name="identityServerAuthority" value="https://id.xm.local" patch:source="Sitecore.Owin.Authentication.IdentityServer.config" />
 	<mvc patch:source="Sitecore.Mvc.config">
 		<areas>
 			<!-- MVC: Sitecore will by default register all areas in the initialize pipeline.
